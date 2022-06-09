@@ -18,4 +18,7 @@ public class StringLearning {
             Character.isDigit(charater);
             Character.isLowerCase(charater);
         }
-        }}
+    }
+
+
+}

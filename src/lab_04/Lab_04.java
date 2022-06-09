@@ -3,7 +3,7 @@ package lab_04;
 import java.security.SecureRandom;
 import java.util.*;
 
-public class lab_04 {
+public class Lab_04 {
     public static void main(String[] args) {
 
         List<Integer> intArray = new ArrayList<>();
