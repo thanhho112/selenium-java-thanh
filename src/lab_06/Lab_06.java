@@ -28,26 +28,31 @@ public class Lab_06 {
         * Solution 3
         *   1. split "and" => phan lam 2 doan
         *   2. roi get number & check unit => calculate
+        * Solution 4
+        *   1. Tim index hr va minutes 
+        *   2. loop for timi number before index
+        *   3. ParseInt number => calculate
+        *  => phat hien diem yeu, neu 2 con so la tieu luon => chua biet cach sua => tam thoi theo de bai
         * */
-        String timeStr = "2hrs and 5 minutes";
-        String newNumberStr = null;
-
-        String[] splitStr = timeStr.split("and");
-
-        for (String s:splitStr) {
-            System.out.println(s);
+        String myStr = "2 hrs and 5 minutes";
+        int num1 = 0;
+        int num2 = 0;
+        int total = 0;
+    
+        for (int i=0; i < myStr.indexOf("hrs"); i++){
+            if (Character.isDigit(myStr.charAt(i))){
+                num1 = Integer.parseInt(myStr.valueOf(myStr.charAt(i)));
+                num1 = num1 * 60;
+            }
         }
-
-
-//        for (int i = 0; i < splitStr.length(); i++) {
-//            if (Character.isDigit(timeStr.charAt(i))){
-//                newNumberStr = newNumberStr + timeStr.charAt(i);
-//            }
-//        }
-//        char[] charNumberArr = newNumberStr.toCharArray();
-//        for (char ch: charNumberArr) {
-//            int num1 = ch.pa
-//        }
+        
+        for (int i=myStr.indexOf("hrs"); i < myStr.indexOf("minutes"); i++){
+            if (Character.isDigit(myStr.charAt(i))){
+                num2 = Integer.parseInt(myStr.valueOf(myStr.charAt(i)));
+            }
+        }
+        total = num1 + num2;
+        System.out.println("Total minutes= " + total);
 
     }
 
