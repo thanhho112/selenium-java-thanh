@@ -1,0 +1,49 @@
+Tinh toan bug leakage:
+Bug Leakage = (Prod) / (total - invalid)
+
+----lesson_09
+Encapsolation:
+
+từ khóa <private> <Attribute>
+
+la 1 ky thuat hide het cac atributte khong cho ben ngoai truy cap vao
+Co kha nang trien khai write only and Read-only
+
+Thế nào là:
+Write only: chỉ cho viết nhưng không cho đọc value đó
+ex: Tạo băng contructor => thay đỏi dc attribute => không cho đọc ra
+Read-only: sau khi đc tạo ra => chỉ cho phép đọc ra
+ex: sau khi new object với attribute data => không thê thay đổi value
+
+----lesson_09_1
+Builder Design pattern => dùng để tổ chức 1 loại object có rất nhiều attribute cần SET
+
+Đối với 1 bài toán nhiều attritute => cần phải allow hêt toàn bộ (public) setter
+
+Immutable object => data bên trong không bị thay đổi | READ ONLY
+=> Builder design Patter (Read only & Write only)=> cho thay đỏi data và chỉ cho READ-ONLY
+
+<proctected> => không cho bên ngoài dùng, chỉ cho con đùng thôi
+ex: protected HouseWithBuilder(){
+
+}
+
+//Inner class |
+
+=> sử dụng inner class trực tiêp phải IMPORT STATIC
+
+---- METHOD CHAINING
+Method Chaining => cho gọi 1 lèo tất cả method trong 1 line
+=> toàn bộ method trong BUILDER => phải return object BUILDER
+
+ex: HouseWithBuilder house1 = builder.setColor("Pink").setMainDoor(10).setWindow(1).build();
+
+
+-- Bài tập
+Chỉ có 1 class animal trong bài và phải có Inner class trong Animal (Builder Design Pattern)
+Có cánh thì làm khán giả
+Lọc con nào có cánh thì hok cho đua
+
+
+
+

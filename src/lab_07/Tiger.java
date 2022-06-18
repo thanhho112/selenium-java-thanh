@@ -1,21 +1,19 @@
 package lab_07;
 
-import java.security.SecureRandom;
+public class Tiger extends Animal {
 
-public class Dog extends Animal {
-
-    private final int MAX_SPEED = 60;
+    private final int MAX_SPEED = 100;
     private String animalName;
     private int speed;
 
-    public Dog() {
+    public Tiger() {
         this.speed = setSpeed(MAX_SPEED);
-        this.animalName = setAnimalName("Dog");
+        this.animalName = setAnimalName("Tiger");
     }
 
     @Override
     public String toString() {
-        return "Dog{" +
+        return "Tiger{" +
                 "MAX_SPEED=" + MAX_SPEED +
                 ", animalName='" + animalName + '\'' +
                 ", speed=" + speed +

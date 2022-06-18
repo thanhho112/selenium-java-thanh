@@ -1,4 +1,5 @@
 package lesson_07;
 
-public class Person {
+//class SolaRobotCat dc call la IS-A Replationship
+public class SolarRobotCat extends RobotCat{
 }

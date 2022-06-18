@@ -1,0 +1,44 @@
+1.Trả lơi - WHY sử dụng STATIC => bai nay cuc ky quan trong
+=> thấy STATIC
+=> class member: bao gồm class variable and class method gắn với keyword STATIC
+dc sinh ra trước khi object sinh ra
+=> class method
+
+Class variable se dc SHARE cho tat ca nhung thang khac su dung no
+
+Khi nào sử dụng STATIC
+=> STATIC co the call STATIC
+=> STATIC khong the call NON-STATIC
+=> NON-STATIC có the call STATIC/ NON-STATIC
+
+Thường sử dụng trong các Utility method
+
+Một CLASS MEMBER có thể override không?
+=> class variable: => dc => overide bằng STATIC block
+static {
+    name = "class variable override";
+}
+
+=> class method: => KO được OVERRIDE
+class method nó trực thuộc vào Object <= cần nghe lại recording để viets lại chỗ này
+
+
+Từ khóa SUPPER.<> => call class trùm OBJECT trong java
+
+Class variable: PRIVATE STATIC => GIÃI THIK BÀI HỌC SAU
+
+=== bài tập về nhà
+LAB 7.1
+Full time employee là IS-A employee
+Contract time employee là IS-A employee
+coi video hàm Char mí con mèo
+
+LAB 7.2
+Cuộc đua có 3 con vât = có tốc độ khác nhau
+horse/tiger/dog IS-A animal
+cả cuộc đua chỉ 1 speed thôi
+
+=> Gợi ý cho line 1 create 1 animal con vât có speed random => create contructor(truyền random speed)
+
+
+

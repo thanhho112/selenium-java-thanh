@@ -1,4 +1,4 @@
 package lesson_07;
 
-public class RobotCat {
+public class Person {
 }

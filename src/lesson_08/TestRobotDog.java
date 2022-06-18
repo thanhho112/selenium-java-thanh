@@ -1,2 +1,4 @@
-package lesson_08;public class TestRobotDog {
+package lesson_08;
+
+public class TestRobotDog {
 }
