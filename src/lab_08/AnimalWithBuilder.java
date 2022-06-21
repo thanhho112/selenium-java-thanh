@@ -6,7 +6,7 @@ public class AnimalWithBuilder {
 
     private String animalName;
     private int speed;
-    private boolean isflyable = false;
+    private boolean isflyable;
 
     protected AnimalWithBuilder(Builder builder) {
         this.animalName = builder.animalName;
@@ -33,11 +33,6 @@ public class AnimalWithBuilder {
         private int speed;
         private boolean isflyable = false;
 
-//        public Builder(String animalName, boolean flyable) {
-//            this.animalName = animalName;
-//            this.flyable = flyable;
-//        }
-
         public Builder setAnimalName(String animalName) {
             this.animalName = animalName;
             return this;
@@ -55,15 +50,6 @@ public class AnimalWithBuilder {
 
         public AnimalWithBuilder build(){
             return new AnimalWithBuilder(this);
-        }
-
-        @Override
-        public String toString() {
-            return "Builder{" +
-                    "animalName='" + animalName + '\'' +
-                    ", speed=" + speed +
-                    ", flyable=" + isflyable +
-                    '}';
         }
     }
 
