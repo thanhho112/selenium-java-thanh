@@ -1,0 +1,45 @@
+Break ISA-Relationship
+Solution:
+    1. CASTING => ep kieu
+    2. Change design
+
+== abstract: class / method ( truu tuong)
+    => Fully FORCE IS-A relationship (child class phai override method cua parent class)
+
+abstract method phai nam trong abstract method
+
+vi du: public abstract int getSalary(){} => co 1 method truu tuong nao do can phai thiet ke tiep
+
+Cau hoi: Co the tao dc 1 new instance tu abstract khong
+Tra loi:
+    1. Khong
+    2. Chi lam duoc neu nhu minh provide 1 body override het cac method trong abstract class do
+        => (giong 1 new class extend tu abstract class)
+
+=========
+Cau hoi: Muon test login page cua cty
+Login page co:
+internal login page
+    #userbame
+    #password
+    #logibbtn
+
+external login page
+    .userbame
+    .password
+    .logibbtn
+
+input user name > input pwd > click on Login btn > User Dashboard
+
+Req:
+. Test Login Pages
+
+Solution: bao gom cac buoc sau
+    1. Create abstract class Loginpage:
+        1.1. Create abstract method: username(), password(), loginbtn()
+        1.2. create method login(){ su dung ket qua cua abstract method}
+    2. Create 2 child class InternalLogin, ExteralLogin extend LoginPage
+        2.1. 2 class con phai overrid 3 abstract method tu 1.1
+
+
+
