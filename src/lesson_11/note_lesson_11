@@ -1,0 +1,22 @@
+Access Modifier:
+1. Service method: public
+2. Support method: private
+
+3. Gom nhom: protected (con cua no, hok phai con nhugn phai chung package
+4. Default: (cho con, same package, non-package)
+
+--Cau hoi pv
+1. Polymorphism laf gi?
+2. Cross browser testing
+3. Hay cho biet su khac nhau giua:
+    Webdriver driver = new ChromeDriver();
+        => loi dung Poly trong OOP concept
+        => li do: tai 1 thoi diem nao do nguoi ta muon chuyen sang 1 broser driver kahc
+    ChromeDiriver driver = new ChromeDriver();
+
+===== Interface
+
+===== HAS Relationship
+
+
+

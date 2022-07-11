@@ -1,0 +1,30 @@
+Java exception
+
+Khi error xuat hien:
+1. Dat break point tai nhung line bao loi => run Debug mode
+
+Try...Catch
+1. CATCH khong co j ca => chuogn trinh van chay, nhung hok co thong bao j het
+    try{
+        //DO SOTHING
+    } catch (Exception e) {
+    }
+
+2. CATCH co print thong bao: có thể catch nhiều lần từ nhỏ tới to
+    try{
+        //DO SOTHING
+    } catch (ArithmeticException e) {      => catch chính xác lỗi, nếu ra lỗi này thì show thông báo
+        throw new IlligalArgumentException("[ERR] you so something wrong")
+    } catch(Exception e) {                 => catch có lối thì sẽ show
+        e.printStackTrace(); => in loi cua java bao
+        System.out.println("Ban lam sai roi");; => print loi minh ghi
+    } finally {                            => dù trong try..log có lỗi hay hok có lỗi thì nó vẫn thực thi
+            System.out.println("Luon luon run dù có lỗi hay không");
+    }
+
+3. Cách dúng TRY BLOCK
+    try...catch
+    try...catch...catch...finally
+    try...finally
+
+4.
