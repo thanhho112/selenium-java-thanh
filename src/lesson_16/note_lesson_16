@@ -1,0 +1,83 @@
+Bài học:
+1. Cách tìm element, DOM Tree là gì?
+2. Exception error throw trong quá trình tìm element
+3. Giãi thik implicitWait()
+
+
+===Define selector values
+By usernameSel = By.id("username")
+By passwordSel = By.cssSelector("password")
+By loginbtnSel = By.cssSelector("[type='submit']")
+
+--Cach tim nhiều element the same value tagName()
+Ví dụ: tìm element có selector value là input
+By loginInputFieldsSel = By.tagName("input");
+        => khi tìm thấy quá nhiều selector input thì cần dùng findelements()
+            //Interactiom
+
+--Cách tìm selector by linktext()
+    By poweredByLinkTextSel = By.linkText("Elemental Selenium");  (toàn bộ text có link)
+    By poweredByLinkTextSel = By.partiallinkText("Elemental");    (1 phần text có link)
+
+--Cách tìm element by attribute/CSS value
+    loginBtnElm.getAttribute("type")
+    loginBtnElm.getCSSValue("background-color")
+
+
+=====For find element
+NOte bài cũ: java - có 8 loại data
+Find element type ( 8 loại)
+    id
+    linktext
+    partialLinkText
+    name
+    tagName
+    xpath => kho maintain
+    className
+    cssSelector
+
+DOM tree (document Object Model) => nhiệm vụ get all HTML thành DOM
+
+Tìm element bằng cssSelector (search: CSS Selector Reference - https://www.w3schools.com/cssref/css_selectors.asp)
+Dev Tool => Console
+        => viết tim element id = username: $('#username')
+        => tìm theo điều kiên attribute: $("[type='submit']") or $("[type=\"submit\"]")
+
+====Interaction
+elementvalue.sendKeys("chuỗi muốn input vào trong textbox")
+
+Interact với nhưng element mình tìm dc
+
+Khi tim dc 1 selector value mà bị sai => exception error bị quăng ra NoSuchElementException.
+    Khi lỗi này xuất hiện lá sex treo luôn chương trình
+    => cần phải try..catch chỗ tìm element và thực thi với element đó
+
+Trickly for findelement() va findelements() trong trường hơp element sai/không tìm thây
+    findelement() => throw exception error NoSuchElementException
+    findelements() => trả về LIST rỗng
+    (xem video cho giãi thích)
+
+-- Error cần nhớ Exception
+    NoSuchElementException: => nhìn ở trên
+    StaleEmelemntReferenceException => (element nó hok còn trên DOM tree nữa)
+        => solution for fix: sử dụng driver.navigate().refresh() để refresh page và find lại element
+
+===Implicit wait, explicit wait, fluent Wait
+Implicit wait: => chỉ sủ dụng cho FIND ELEMENT
+    là 1 loại wait strategy => apply for the whole driver session => tìm bất kỳ element nào trong vòng 15s, mỗi lân rerun tìm là 500mili sec (0.5s) => không tìm ra trong thời gian được cho tìm sẽ throw lỗi
+    ví dụ:
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15))
+        => nghĩa là: tìm trong toi đa 15s nếu không tìm thấy (không có thì đi tìm lại với Interval time (thời gian ngừng lại để tìm lại) 500mili sec (0.5s)
+                    ==> Sau 15s repeat tìm hoài hok thấy => thì mới throw ra exception
+explicit wait
+fluent Wait
+
+== Method getTitle(). getcurenturl()
+
+== Go back to previous page
+    driver.navigate().back(); => trả về page trước đó
+    driver.navigate().refresh(); => refresh cais page
+
+
+
+
